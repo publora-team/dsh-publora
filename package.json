@@ -1,0 +1,27 @@
+{
+  "name": "dsh-publora",
+  "version": "1.0.0",
+  "description": "Draft, schedule and publish posts to LinkedIn, X, Instagram, Threads, TikTok, YouTube, Facebook, Bluesky, Mastodon and Telegram from DeepSeek Harness.",
+  "icon": "./icon.svg",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": ["lib/", "skills/", "cordis.patch.yml", "icon.svg", "README.md", "LICENSE"],
+  "scripts": { "test": "node --test" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "engines": { "node": ">=20.0.0" },
+  "keywords": ["dsh", "dsh-plugin", "deepseek-harness", "publora", "mcp", "social-media", "scheduling", "linkedin", "instagram", "tiktok"],
+  "author": { "name": "Publora", "email": "support@publora.com", "url": "https://publora.com" },
+  "homepage": "https://github.com/publora-team/dsh-publora#readme",
+  "repository": { "type": "git", "url": "git+https://github.com/publora-team/dsh-publora.git" },
+  "bugs": { "email": "support@publora.com" },
+  "license": "MIT"
+}

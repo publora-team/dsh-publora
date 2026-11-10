@@ -1,0 +1,19 @@
+- insert:
+    - id: publora
+      name: dsh-publora
+      config:
+        apiKeyEnv: PUBLORA_API_KEY
+    - id: publora-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      inject: [publora]
+      config:
+        transport: streamable-http
+        serverName: publora
+        url: !!js ctx.publora.url
+        headers: !!js ctx.publora.headers
+        failOnStartupError: false
+        reconnect:
+          enabled: true
+          initialDelayMs: 2000
+          maxDelayMs: 30000
+          maxAttempts: 10
